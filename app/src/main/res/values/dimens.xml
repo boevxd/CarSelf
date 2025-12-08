@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bottom_spacer">64dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_extra_small">4dp</dimen>
+    <dimen name="progress_indicator_size">20dp</dimen>
+    <dimen name="shadow_elevation">8dp</dimen>
+    <dimen name="locale_dropdown_height">48dp</dimen>
+    <dimen name="calc_button_height">56dp</dimen>
+</resources>
