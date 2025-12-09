@@ -63,7 +63,6 @@ fun Home(
     name: String? = null,
     shouldExit: Boolean = false
 ) {
-    // Hide system bars (navigation + status) for this screen
     val view = LocalView.current
 
     SideEffect {
@@ -178,7 +177,7 @@ fun Home(
                             onClick = { onVehicleClick(vehicleWithStats) },
                             onEditClick = { onEditVehicleClick(vehicleWithStats.vehicle) },
                             onDeleteClick = { onDeleteVehicleClick(vehicleWithStats.vehicle) },
-//                            onExportClick = { onExportVehicleClick(vehicleWithStats.vehicle) },
+                            onExportClick = { onExportVehicleClick(vehicleWithStats.vehicle) },
                             modifier = Modifier.animateItem()
                         )
                     }
