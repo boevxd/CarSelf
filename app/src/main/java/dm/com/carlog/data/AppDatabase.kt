@@ -9,7 +9,7 @@ import dm.com.carlog.data.vehicle.VehicleDao
 
 @Database(
     entities = [Vehicle::class, Fuel::class],
-    version = 1, // NOTE: Create local migration when changing version
+    version = 1,
     exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
