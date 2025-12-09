@@ -26,7 +26,7 @@ local.properties
 
 proguard/
 
-# Log Files
+
 *.log
 
 .navigation/
@@ -43,7 +43,6 @@ workspace.xml
 *.jks
 *.keystore
 
-# External native build folder
 .externalNativeBuild/
 
 # Google Services (e.g., APIs or Firebase)
