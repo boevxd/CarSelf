@@ -163,9 +163,9 @@ class VehicleFormViewModel @Inject constructor(
             errorState.yearError = "Year cannot be empty"
             isValid = false
         } else {
-            val maxYear = LocalDate.now().year + 5 // Allow up to 5 years in the future
+            val maxYear = LocalDate.now().year + 5 
             val yearInt = year.toIntOrNull()
-            if (yearInt == null || yearInt < 1886 || yearInt > maxYear) { // First car invented in 1886
+            if (yearInt == null || yearInt < 1886 || yearInt > maxYear) { 
                 errorState.yearError = "Year must be a valid number between 1886 and $maxYear"
                 isValid = false
             }
