@@ -74,27 +74,7 @@ interface VehicleDao {
     )
     fun getAllWithStats(): Flow<List<VehicleWithStats>>
 
-    /**
-     * Retrieves a specific vehicle by ID with calculated statistics based on its fuel records.
-     *
-     * The statistics calculated for the vehicle include:
-     * - latest_odometer: The highest odometer reading from all fuel records
-     * - average_fuel_economy: Average of fuel economy across all refuels
-     * - total_fuel_added: Sum of all fuel added to the vehicle
-     * - total_spent: Total money spent on fuel for this vehicle
-     * - refuel_count: Number of times the vehicle has been refueled
-     * - refuel_per_month: Average number of refuels per month since the first recorded refuel
-     *   (calculated using current date minus earliest fuel record date, converted to months)
-     *   The constant 30.44 represents the average number of days in a month
-     *   The calculation divides by 86400.0 to convert seconds to days
-     * - avg_gallon_refueled: Average amount of fuel added per refueling
-     * - avg_spent_per_refuel: Average amount of money spent per refueling
-     *
-     * COALESCE is used to provide default values (0) when no fuel records exist.
-     *
-     * @param dm The ID of the vehicle to retrieve with statistics
-     * @return The vehicle with the specified ID and its calculated statistics, or null if not found
-     */
+    
     @Transaction
     @Query(
         """
