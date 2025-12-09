@@ -26,24 +26,7 @@ interface VehicleDao {
     @Query("SELECT * FROM vehicles WHERE id = :id")
     suspend fun getById(id: String): Vehicle?
 
-    /**
-     * Retrieves all vehicles with calculated statistics based on their fuel records.
-     *
-     * The statistics calculated for each vehicle include:
-     * - latest_odometer: The highest odometer reading from all fuel records
-     * - average_fuel_economy: Average of fuel economy across all refuels
-     * - total_fuel_added: Sum of all fuel added to the vehicle
-     * - total_spent: Total money spent on fuel for this vehicle
-     * - refuel_count: Number of times the vehicle has been refueled
-     * - refuel_per_month: Average number of refuels per month since the first recorded refuel
-     *   (calculated using current date minus earliest fuel record date, converted to months)
-     * - avg_gallon_refueled: Average amount of fuel added per refueling
-     * - avg_spent_per_refuel: Average amount of money spent per refueling
-     *
-     * COALESCE is used to provide default values (0) when no fuel records exist.
-     *
-     * @return A Flow emitting a list of vehicles with their calculated statistics
-     */
+    
     @Transaction
     @Query(
         """
